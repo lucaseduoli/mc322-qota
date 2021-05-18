@@ -1,2 +1,2 @@
 # mc322-qota
-esquece padrinho
+Repositório compartilhado entre Lucas Eduardo (RA182333) e Leonardo Borges (RA177829)
