@@ -25,13 +25,13 @@ public class Sala {
     }
 
     public int insereComponente(Componente componente){
-        if (componente.getTipo() == 'P')
+        if (componente.getTipo() == 'P') // única particularidade do código: se for um player, a sala é visitada.
             visitado = true;
         if(componentes[0] != null){
             int retorno = componente.verificaAcao(componentes[0].getTipo(), posX, posY);
-            if(retorno == 1){
+            if(retorno == 1){ // quando o verificaAcao de cada componente retorna 1, a sala deve substituir o primeiro componente por ele.
                 componentes[0] = componente;
-            } else if(retorno == 2){
+            } else if(retorno == 2){ // quando o verificaAcao de cada componente retorna 2, a sala deve adicionar o componente na última casa e ordenar o vetor, com base nas prioridades.
                 posUltimaCasa++;
                 componentes[posUltimaCasa] = componente;
                 ordenaVetor();
